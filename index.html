@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mentex — Pre-registro</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
   <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     :root {
       --purple: #7C3AED;
@@ -15,7 +23,8 @@
       --cyan: #06B6D4;
     }
 
-    html, body {
+    html,
+    body {
       height: 100%;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background: #000;
@@ -57,25 +66,21 @@
     .shadow-top {
       top: 0;
       height: 38vh;
-      background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.97) 0%,
-        rgba(0, 0, 0, 0.72) 35%,
-        rgba(0, 0, 0, 0.2) 70%,
-        transparent 100%
-      );
+      background: linear-gradient(to bottom,
+          rgba(0, 0, 0, 0.97) 0%,
+          rgba(0, 0, 0, 0.72) 35%,
+          rgba(0, 0, 0, 0.2) 70%,
+          transparent 100%);
     }
 
     .shadow-bottom {
       bottom: 0;
       height: 38vh;
-      background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.97) 0%,
-        rgba(0, 0, 0, 0.72) 35%,
-        rgba(0, 0, 0, 0.2) 70%,
-        transparent 100%
-      );
+      background: linear-gradient(to top,
+          rgba(0, 0, 0, 0.97) 0%,
+          rgba(0, 0, 0, 0.72) 35%,
+          rgba(0, 0, 0, 0.2) 70%,
+          transparent 100%);
     }
 
     /* ── Ambient Glow Orbs ────────────────────────────────────── */
@@ -88,16 +93,20 @@
     }
 
     .orb-1 {
-      width: 700px; height: 700px;
+      width: 700px;
+      height: 700px;
       background: #7C3AED;
-      top: -200px; left: -180px;
+      top: -200px;
+      left: -180px;
       opacity: 0.13;
     }
 
     .orb-2 {
-      width: 550px; height: 550px;
+      width: 550px;
+      height: 550px;
       background: #06B6D4;
-      bottom: -150px; right: -120px;
+      bottom: -150px;
+      right: -120px;
       opacity: 0.12;
     }
 
@@ -127,8 +136,7 @@
 
     .logo-icon {
       height: 36px;
-      filter: drop-shadow(0 0 14px rgba(124, 58, 237, 0.5))
-              drop-shadow(0 0 28px rgba(255, 255, 255, 0.15));
+      filter: drop-shadow(0 0 14px rgba(124, 58, 237, 0.5)) drop-shadow(0 0 28px rgba(255, 255, 255, 0.15));
     }
 
     .logo-full {
@@ -189,7 +197,8 @@
     }
 
     .badge-dot {
-      width: 7px; height: 7px;
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
       background: var(--purple-light);
       box-shadow: 0 0 10px var(--purple-light);
@@ -197,8 +206,15 @@
     }
 
     @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50%       { opacity: 0.3; }
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.3;
+      }
     }
 
     /* Heading */
@@ -213,11 +229,11 @@
 
     .h1-white {
       display: block;
-      background: linear-gradient(180deg, #ffffff 0%, rgba(255,255,255,0.75) 100%);
+      background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.75) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      filter: drop-shadow(0 2px 30px rgba(255,255,255,0.12));
+      filter: drop-shadow(0 2px 30px rgba(255, 255, 255, 0.12));
     }
 
     .h1-gradient {
@@ -226,7 +242,7 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      filter: drop-shadow(0 0 40px rgba(124,58,237,0.4));
+      filter: drop-shadow(0 0 40px rgba(124, 58, 237, 0.4));
     }
 
     /* Subtitle */
@@ -264,7 +280,7 @@
     .input-row:focus-within {
       border-color: rgba(124, 58, 237, 0.55);
       box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.13),
-                  0 12px 40px rgba(0, 0, 0, 0.5);
+        0 12px 40px rgba(0, 0, 0, 0.5);
     }
 
     .input-row.error {
@@ -284,7 +300,9 @@
       color: #fff;
     }
 
-    .input-row input::placeholder { color: rgba(255,255,255,0.35); }
+    .input-row input::placeholder {
+      color: rgba(255, 255, 255, 0.35);
+    }
 
     .btn-submit {
       flex-shrink: 0;
@@ -309,7 +327,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
       pointer-events: none;
     }
 
@@ -318,9 +336,14 @@
       box-shadow: 0 10px 30px rgba(124, 58, 237, 0.55);
     }
 
-    .btn-submit:active { transform: translateY(0); }
+    .btn-submit:active {
+      transform: translateY(0);
+    }
 
-    .btn-submit.loading { opacity: 0.7; pointer-events: none; }
+    .btn-submit.loading {
+      opacity: 0.7;
+      pointer-events: none;
+    }
 
     /* Success */
     .success-msg {
@@ -338,7 +361,9 @@
       animation: fadeUp 0.4s ease both;
     }
 
-    .success-msg.show { display: flex; }
+    .success-msg.show {
+      display: flex;
+    }
 
     .form-note {
       font-size: 12px;
@@ -360,29 +385,45 @@
     }
 
     .av {
-      width: 34px; height: 34px;
+      width: 34px;
+      height: 34px;
       border-radius: 50%;
-      border: 2px solid rgba(0,0,0,0.6);
+      border: 2px solid rgba(0, 0, 0, 0.6);
       margin-left: -9px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 12px;
       font-weight: 700;
-      color: rgba(255,255,255,0.9);
+      color: rgba(255, 255, 255, 0.9);
       overflow: hidden;
     }
 
-    .av:first-child { margin-left: 0; }
-    .av-1 { background: linear-gradient(135deg, #7C3AED, #5B21B6); }
-    .av-2 { background: linear-gradient(135deg, #06B6D4, #0891B2); }
-    .av-3 { background: linear-gradient(135deg, #EC4899, #BE185D); }
-    .av-4 { background: linear-gradient(135deg, #F59E0B, #D97706); }
+    .av:first-child {
+      margin-left: 0;
+    }
+
+    .av-1 {
+      background: linear-gradient(135deg, #7C3AED, #5B21B6);
+    }
+
+    .av-2 {
+      background: linear-gradient(135deg, #06B6D4, #0891B2);
+    }
+
+    .av-3 {
+      background: linear-gradient(135deg, #EC4899, #BE185D);
+    }
+
+    .av-4 {
+      background: linear-gradient(135deg, #F59E0B, #D97706);
+    }
+
     .av-5 {
-      background: rgba(255,255,255,0.08);
+      background: rgba(255, 255, 255, 0.08);
       font-size: 10px;
       font-weight: 600;
-      color: rgba(255,255,255,0.55);
+      color: rgba(255, 255, 255, 0.55);
       backdrop-filter: blur(8px);
     }
 
@@ -413,22 +454,50 @@
 
     /* ── Animations ───────────────────────────────────────────── */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(22px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @keyframes fadeDown {
-      from { opacity: 0; transform: translateY(-16px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(-16px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* ── Responsive ───────────────────────────────────────────── */
     @media (max-width: 640px) {
-      header { padding: 20px 24px; }
-      footer  { padding: 20px 24px; }
+      header {
+        padding: 20px 24px;
+      }
 
-      .logo-icon { height: 28px; }
-      .logo-full { height: 24px; }
+      footer {
+        padding: 20px 24px;
+      }
+
+      .logo-icon {
+        height: 28px;
+      }
+
+      .logo-full {
+        height: 24px;
+      }
+
+      h1 {
+        font-size: clamp(1.9rem, 9vw, 2.8rem);
+      }
 
       .input-row {
         flex-direction: column;
@@ -449,12 +518,13 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- ── Video Background ──────────────────────────────────── -->
   <div class="video-bg">
     <video autoplay muted loop playsinline preload="auto">
-      <source src="../mentex-video.mp4" type="video/mp4" />
+      <source src="https://res.cloudinary.com/dxjx3oa5d/video/upload/lv_0_20260511143441_vazbc7.mp4" type="video/mp4" />
     </video>
   </div>
 
@@ -472,12 +542,11 @@
     <!-- Header -->
     <header>
       <div class="logo-wrap">
-        <img src="Icono-mentex.png" alt="Ícono Mentex" class="logo-icon" />
-        <img src="mentex-logo.png" alt="Mentex" class="logo-full" />
+        <img src="image.png" alt="Mentex" class="logo-full" />
       </div>
       <a href="#registro" class="nav-pill">
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-          <path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
+          <path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" />
         </svg>
         Pre-registro
       </a>
@@ -492,23 +561,18 @@
       </div>
 
       <h1>
-        <span class="h1-white">Tu vida,</span>
-        <span class="h1-gradient">mejor organizada.</span>
+        <span class="h1-white">El ecosistema que</span>
+        <span class="h1-gradient">estabas esperando</span>
       </h1>
 
       <p class="subtitle">
-        Mentex centraliza tus hábitos, metas y bienestar en un solo lugar.
-        Sé de los primeros en experimentarlo.
+        Productividad, bienestar y crecimiento personal en una sola experiencia hermosa y consciente.
+        Reserva tu lugar y desbloquea contenido exclusivo.
       </p>
 
       <div class="form-wrap" id="registro">
         <div class="input-row" id="inputRow">
-          <input
-            type="email"
-            id="emailInput"
-            placeholder="tucorreo@ejemplo.com"
-            autocomplete="email"
-          />
+          <input type="email" id="emailInput" placeholder="tucorreo@ejemplo.com" autocomplete="email" />
           <button class="btn-submit" id="submitBtn" onclick="handleSubmit()">
             Quiero acceso
           </button>
@@ -516,7 +580,7 @@
 
         <div class="success-msg" id="successMsg">
           <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-            <polyline points="20 6 9 17 4 12"/>
+            <polyline points="20 6 9 17 4 12" />
           </svg>
           ¡Listo! Te avisaremos cuando lancemos.
         </div>
@@ -550,18 +614,18 @@
     // ── Counter animation ──────────────────────────────────────
     const TARGET = 214;
     let count = 0;
-    const numEl    = document.getElementById('counterNum');
+    const numEl = document.getElementById('counterNum');
     const bubbleEl = document.getElementById('extraBubble');
 
     // Load existing registrations from localStorage
     const stored = JSON.parse(localStorage.getItem('mentex_registrations') || '[]');
-    const bonus  = stored.length;
+    const bonus = stored.length;
 
     setTimeout(() => {
       const interval = setInterval(() => {
         count += Math.ceil((TARGET + bonus - count) / 7);
         if (count >= TARGET + bonus) { count = TARGET + bonus; clearInterval(interval); }
-        numEl.textContent    = count.toLocaleString('es');
+        numEl.textContent = count.toLocaleString('es');
         bubbleEl.textContent = '+' + Math.max(0, count - 4);
       }, 35);
     }, 800);
@@ -569,8 +633,8 @@
     // ── Email form ─────────────────────────────────────────────
     function handleSubmit() {
       const input = document.getElementById('emailInput');
-      const btn   = document.getElementById('submitBtn');
-      const row   = document.getElementById('inputRow');
+      const btn = document.getElementById('submitBtn');
+      const row = document.getElementById('inputRow');
       const email = input.value.trim();
 
       // Validate
@@ -591,12 +655,12 @@
           list.push(email);
           localStorage.setItem('mentex_registrations', JSON.stringify(list));
           count++;
-          numEl.textContent    = count.toLocaleString('es');
+          numEl.textContent = count.toLocaleString('es');
           bubbleEl.textContent = '+' + Math.max(0, count - 4);
         }
 
-        input.value          = '';
-        btn.textContent      = 'Quiero acceso';
+        input.value = '';
+        btn.textContent = 'Quiero acceso';
         btn.classList.remove('loading');
 
         const msg = document.getElementById('successMsg');
@@ -611,4 +675,5 @@
   </script>
 
 </body>
+
 </html>
